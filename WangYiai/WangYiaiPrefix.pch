@@ -1,0 +1,37 @@
+//
+//  WangYiaiPrefix.pch
+//  WangYiai
+//
+//  Created by Jejms on 2019/12/8.
+//  Copyright © 2019 Jejms. All rights reserved.
+//
+
+#ifndef WangYiaiPrefix_pch
+#define WangYiaiPrefix_pch
+//宏
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define PFR [[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0 ? @"PingFangSC-Regular" : @"PingFang SC"
+#define PFR20Font [UIFont fontWithName:PFR size:20];
+/** 屏幕宽度 */
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+/** 屏幕高度 */
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#define NewConstraints ScreenH == 812 || ScreenH == 896
+//屏幕适配
+/**当前设备对应375的比例*/
+#define Ratio_414 (ScreenW/414.0)
+/**转换成当前比例的数*/
+#define Ratio(x) ((int)((x) * Ratio_414))
+/**当前设备对应375的比例*/
+#define NRatio_375 (ScreenW/375.0)
+/**转换成当前比例的数*/
+#define NRatio(x) ((int)((x) * NRatio_375))
+
+//颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define maiColor RGBA(87, 126, 217, 1)
+#define AppKey @"568ef52c7c9ae8e68317bdda5eb63ac5"
+
+#import <AFNetworking.h>
+#import "HttpTool.h"
+#endif /* WangYiaiPrefix_pch */
